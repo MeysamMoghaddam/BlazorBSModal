@@ -7,12 +7,5 @@
       <BasePath>_content/BlazorBSModal</BasePath>
       <RelativePath>background.png</RelativePath>
     </StaticWebAsset>
-    <StaticWebAsset Include="$(MSBuildThisFileDirectory)..\staticwebassets\BlazorBSModal.bundle.scp.css">
-      <SourceType>Package</SourceType>
-      <SourceId>BlazorBSModal</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/BlazorBSModal</BasePath>
-      <RelativePath>BlazorBSModal.bundle.scp.css</RelativePath>
-    </StaticWebAsset>
   </ItemGroup>
 </Project>

@@ -14,10 +14,10 @@ build_property.MSBuildProjectDirectory = E:\forsat\MeysamMoghaddam\BlazorBSModal
 build_property._RazorSourceGeneratorDebug = 
 build_property._RazorSourceGeneratorHeapDumps = 
 
-[e:/forsat/MeysamMoghaddam/BlazorBSModal/BlazorBSModal/BlazorBSModal/_Imports.razor]
-build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [e:/forsat/MeysamMoghaddam/BlazorBSModal/BlazorBSModal/BlazorBSModal/BSModal.razor]
 build_metadata.AdditionalFiles.TargetPath = QlNNb2RhbC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-22xouuswfy
+build_metadata.AdditionalFiles.CssScope = 
+
+[e:/forsat/MeysamMoghaddam/BlazorBSModal/BlazorBSModal/BlazorBSModal/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope =

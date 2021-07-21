@@ -11,9 +11,17 @@
     <RepositoryUrl>https://github.com/MeysamMoghaddam/BlazorBSModal</RepositoryUrl>
     <PackageTags>BlazorWebAssembly Bootstrap Modal dotnet6</PackageTags>
     <PackageReleaseNotes>Bootstrap Modal For Blazor Wasm</PackageReleaseNotes>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="BSModal1.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="BSModal1.razor.css" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include="logo.png" />

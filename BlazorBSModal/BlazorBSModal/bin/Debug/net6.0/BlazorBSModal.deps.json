@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "BlazorBSModal/1.0.1": {
+      "BlazorBSModal/1.0.2": {
         "dependencies": {
           "Microsoft.AspNetCore.Components.Web": "6.0.0-preview.5.21301.17"
         },
@@ -148,7 +148,7 @@
     }
   },
   "libraries": {
-    "BlazorBSModal/1.0.1": {
+    "BlazorBSModal/1.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

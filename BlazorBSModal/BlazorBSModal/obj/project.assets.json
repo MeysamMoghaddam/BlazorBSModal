@@ -524,7 +524,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.1",
+    "version": "1.0.2",
     "restore": {
       "projectUniqueName": "E:\\forsat\\MeysamMoghaddam\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal.csproj",
       "projectName": "BlazorBSModal",
