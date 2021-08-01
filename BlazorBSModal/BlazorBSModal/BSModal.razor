@@ -33,25 +33,29 @@
     [Parameter] public string CloseBtnText { get; set; } = "Close";
     [Parameter] public RenderFragment ModalBodyContentHtml { get; set; }
     [Parameter] public RenderFragment ModalFooterHtmlWhitoutCloseBtn { get; set; }
+    [Parameter] public EventCallback OnCloseModal { get; set; }
+    [Parameter] public EventCallback OnOpenModal { get; set; }
 
     public Guid Guid = Guid.NewGuid();
     public string ModalDisplay = "none;";
     public string ModalClass = "";
     public bool ShowBackdrop = false;
 
-    public void Open()
+    public async Task Open()
     {
         ModalDisplay = "block;";
         ModalClass = "Show";
         ShowBackdrop = true;
         StateHasChanged();
+        await OnOpenModal.InvokeAsync();
     }
 
-    public void Close()
+    public async Task Close()
     {
         ModalDisplay = "none";
         ModalClass = "";
         ShowBackdrop = false;
         StateHasChanged();
+        await OnCloseModal.InvokeAsync();
     }
 }
