@@ -13,7 +13,7 @@
     <repository url="https://github.com/MeysamMoghaddam/BlazorBSModal" />
     <dependencies>
       <group targetFramework="net6.0">
-        <dependency id="Microsoft.AspNetCore.Components.Web" version="6.0.0-preview.5.21301.17" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Components.Web" version="5.0.1" exclude="Build,Analyzers" />
       </group>
     </dependencies>
     <contentFiles>

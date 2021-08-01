@@ -5,7 +5,7 @@
   },
   "projects": {
     "E:\\forsat\\MeysamMoghaddam\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal.csproj": {
-      "version": "1.0.2",
+      "version": "1.0.4",
       "restore": {
         "projectUniqueName": "E:\\forsat\\MeysamMoghaddam\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal.csproj",
         "projectName": "BlazorBSModal",
@@ -21,7 +21,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -29,8 +29,8 @@
           "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet5/nuget/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -41,12 +41,12 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
             "Microsoft.AspNetCore.Components.Web": {
               "target": "Package",
-              "version": "[6.0.0-preview.5.21301.17, )"
+              "version": "[5.0.1, )"
             }
           },
           "imports": [
