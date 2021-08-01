@@ -3,6 +3,7 @@
 ################################################################################
 
 *.v2
+/.vs/
 /BlazorBSModal/BlazorBSModal/bin/
 /BlazorBSModal/BlazorBSModal/obj/
 /BlazorBSModal/BlazorBSModal/bin/Debug/net5.0/ref/BlazorBSModal.dll
