@@ -1,11 +1,11 @@
 ﻿@namespace BlazorBSModal
 
-<div class="modal @ModalClass" tabindex="-1" role="dialog" style="display:@ModalDisplay">
+<div class="modal @ModalClass" tabindex="-1" role="dialog" style="display:@ModalDisplay;@(DirectionRTL?"direction: rtl;":"")">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">@ModalTitle</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button @onclick="() => Close()" type="button" style="@(DirectionRTL?"margin: -1rem auto -1rem -1rem;":"")" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -31,6 +31,7 @@
 @code {
     [Parameter] public string ModalTitle { get; set; }
     [Parameter] public string CloseBtnText { get; set; } = "Close";
+    [Parameter] public bool DirectionRTL { get; set; }
     [Parameter] public RenderFragment ModalBodyContentHtml { get; set; }
     [Parameter] public RenderFragment ModalFooterHtmlWhitoutCloseBtn { get; set; }
     [Parameter] public EventCallback OnCloseModal { get; set; }

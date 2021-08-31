@@ -10,8 +10,8 @@
     <PackageProjectUrl>https://github.com/MeysamMoghaddam/BlazorBSModal</PackageProjectUrl>
     <RepositoryUrl>https://github.com/MeysamMoghaddam/BlazorBSModal</RepositoryUrl>
     <PackageTags>BlazorWebAssembly Bootstrap Modal dotnet5</PackageTags>
-    <PackageReleaseNotes>Open And Close Events</PackageReleaseNotes>
-    <Version>1.0.5</Version>
+    <PackageReleaseNotes>DirectionRTL</PackageReleaseNotes>
+    <Version>1.0.6</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
