@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <Description>Bootstrap Modal For Blazor Wasm</Description>
     <PackageIcon>logo.png</PackageIcon>
     <PackageIconUrl />
@@ -9,9 +9,9 @@
     <Copyright>© Moghaddam. All rights reserved.</Copyright>
     <PackageProjectUrl>https://github.com/MeysamMoghaddam/BlazorBSModal</PackageProjectUrl>
     <RepositoryUrl>https://github.com/MeysamMoghaddam/BlazorBSModal</RepositoryUrl>
-    <PackageTags>BlazorWebAssembly Bootstrap Modal dotnet5</PackageTags>
+    <PackageTags>BlazorWebAssembly Bootstrap Modal dotnet6</PackageTags>
     <PackageReleaseNotes>DirectionRTL</PackageReleaseNotes>
-    <Version>1.0.6</Version>
+    <Version>2.0.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
