@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Description>Bootstrap Modal For Blazor Wasm</Description>
-    <PackageIcon>logo.png</PackageIcon>
     <PackageIconUrl />
     <Authors>Meysam Masoud</Authors>
     <Copyright>© Moghaddam. All rights reserved.</Copyright>
@@ -13,7 +12,16 @@
     <PackageReleaseNotes>DirectionRTL</PackageReleaseNotes>
     <Version>2.0.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="wwwroot\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Remove="BSModal1.razor" />
@@ -24,7 +32,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="logo.png" />
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 
@@ -38,8 +49,8 @@
 
   <ItemGroup>
     <None Update="logo.png">
+      <PackagePath>\</PackagePath>
       <Pack>True</Pack>
-      <PackagePath></PackagePath>
     </None>
   </ItemGroup>
 
