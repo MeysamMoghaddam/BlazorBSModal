@@ -1,36 +1,41 @@
 {
   "format": 1,
   "restore": {
-    "E:\\forsat\\MeysamMoghaddam\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal.csproj": {}
+    "F:\\Personal\\BSModal\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal.csproj": {}
   },
   "projects": {
-    "E:\\forsat\\MeysamMoghaddam\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal.csproj": {
-      "version": "1.0.5",
+    "F:\\Personal\\BSModal\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal.csproj": {
+      "version": "2.0.0",
       "restore": {
-        "projectUniqueName": "E:\\forsat\\MeysamMoghaddam\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal.csproj",
+        "projectUniqueName": "F:\\Personal\\BSModal\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal.csproj",
         "projectName": "BlazorBSModal",
-        "projectPath": "E:\\forsat\\MeysamMoghaddam\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "E:\\forsat\\MeysamMoghaddam\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal\\obj\\",
+        "projectPath": "F:\\Personal\\BSModal\\BlazorBSModal\\BlazorBSModal\\BlazorBSModal.csproj",
+        "packagesPath": "C:\\Users\\Artav\\.nuget\\packages\\",
+        "outputPath": "F:\\Personal\\BSModal\\BlazorBSModal\\BlazorBSModal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "E:\\VS19Sdk\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Artav\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "E:\\telerik.blazor": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet5/nuget/v3/index.json": {}
+          "https://nuget.pkg.github.com/bitfoundation/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -41,12 +46,12 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.AspNetCore.Components.Web": {
               "target": "Package",
-              "version": "[5.0.1, )"
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -64,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.5.21302.13\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
