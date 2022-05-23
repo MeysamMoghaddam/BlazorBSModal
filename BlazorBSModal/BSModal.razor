@@ -44,8 +44,8 @@
     [Parameter] public RenderFragment ModalFooterHtmlWhitoutCloseBtn { get; set; }
     [Parameter] public EventCallback OnCloseModal { get; set; }
     [Parameter] public EventCallback OnOpenModal { get; set; }
-    [Parameter] public bool ShowHeader { get; set; }
-    [Parameter] public bool ShowFooter { get; set; }
+    [Parameter] public bool ShowHeader { get; set; } = true;
+    [Parameter] public bool ShowFooter { get; set; } = true;
 
     public Guid Guid = Guid.NewGuid();
     public string ModalDisplay = "none;";
