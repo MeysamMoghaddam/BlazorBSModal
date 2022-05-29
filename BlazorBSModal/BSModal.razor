@@ -3,7 +3,7 @@
 @if (!DisposeModal)
 {
     <div class="modal @ModalClass" tabindex="-1" role="dialog" style="display:@ModalDisplay;@(DirectionRTL?"direction: rtl;":"")">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog @ModalDialogClass @fullScreenAvailability" role="document">
             <div class="modal-content">
                 @if (ShowHeader)
                 {
@@ -60,51 +60,3 @@
 }
 
 
-@code {
-    [Parameter] public string ModalTitle { get; set; }
-    [Parameter] public string CloseBtnText { get; set; } = "Close";
-    [Parameter] public bool DirectionRTL { get; set; }
-    [Parameter] public RenderFragment ModalBodyContentHtml { get; set; }
-    [Parameter] public RenderFragment ModalHeader { get; set; }
-    [Parameter] public RenderFragment ModalFooter { get; set; }
-    [Parameter] public RenderFragment ModalFooterHtmlWhitoutCloseBtn { get; set; }
-    [Parameter] public EventCallback OnCloseModal { get; set; }
-    [Parameter] public EventCallback OnOpenModal { get; set; }
-    [Parameter] public bool ShowHeader { get; set; } = true;
-    [Parameter] public bool ShowFooter { get; set; } = true;
-
-    public Guid Guid = Guid.NewGuid();
-    public string ModalDisplay = "none;";
-    public string ModalClass = "";
-    public bool ShowBackdrop = false;
-    public bool DisposeModal = false;
-
-    public async Task Open()
-    {
-        DisposeModal = false;
-        ModalDisplay = "block;";
-        ModalClass = "Show";
-        ShowBackdrop = true;
-        StateHasChanged();
-        await OnOpenModal.InvokeAsync();
-    }
-
-    public async Task Close()
-    {
-        ModalDisplay = "none";
-        ModalClass = "";
-        ShowBackdrop = false;
-        StateHasChanged();
-        await OnCloseModal.InvokeAsync();
-    }
-
-     public async Task CloseAndDispose()
-    {
-        DisposeModal = true;
-        ModalDisplay = "none";
-        ModalClass = "";
-        ShowBackdrop = false;
-        StateHasChanged();
-        await OnCloseModal.InvokeAsync();
-    }
-}

@@ -9,8 +9,8 @@
     <PackageProjectUrl>https://github.com/MeysamMoghaddam/BlazorBSModal</PackageProjectUrl>
     <RepositoryUrl>https://github.com/MeysamMoghaddam/BlazorBSModal</RepositoryUrl>
     <PackageTags>BlazorWebAssembly Bootstrap Modal dotnet6</PackageTags>
-    <PackageReleaseNotes>DirectionRTL</PackageReleaseNotes>
-    <Version>2.2.0</Version>
+    <PackageReleaseNotes>Fullscreen Modal</PackageReleaseNotes>
+    <Version>2.3.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>logo.png</PackageIcon>
