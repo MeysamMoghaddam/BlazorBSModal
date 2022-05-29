@@ -2,7 +2,7 @@
 
 @if (!DisposeModal)
 {
-    <div class="modal @ModalClass @(FadeModal?"fade":"")" tabindex="-1" role="dialog" style="display:@ModalDisplay;@(DirectionRTL?"direction: rtl;":"")">
+    <div @onclick="ClickOnOutOfModal" class="modal @ModalClass @(FadeModal?"fade":"")" tabindex="-1" role="dialog" style="display:@ModalDisplay;@(DirectionRTL?"direction: rtl;":"")" >
         <div class="modal-dialog @ModalDialogClass @fullScreenAvailability" role="document">
             <div class="modal-content @ModalContentClass">
                 @if (ShowHeader)
@@ -58,7 +58,7 @@
 {
     if (ShowBackdrop)
     {
-        <div class="modal-backdrop fade show" @onclick="ClickOnBackdrop"></div>
+        <div class="modal-backdrop fade show"></div>
     }
 }
 
