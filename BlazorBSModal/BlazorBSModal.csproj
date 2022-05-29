@@ -10,7 +10,7 @@
     <RepositoryUrl>https://github.com/MeysamMoghaddam/BlazorBSModal</RepositoryUrl>
     <PackageTags>BlazorWebAssembly Bootstrap Modal dotnet6</PackageTags>
     <PackageReleaseNotes>DirectionRTL</PackageReleaseNotes>
-    <Version>2.1.2</Version>
+    <Version>2.2.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>logo.png</PackageIcon>
