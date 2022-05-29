@@ -9,47 +9,41 @@ namespace BlazorBSModal
 {
     public partial class BSModal
     {
-        [Parameter]
-        public string ModalTitle { get; set; }
+        [Parameter] public string ModalTitle { get; set; }
 
-        [Parameter]
-        public string CloseBtnText { get; set; } = "Close";
-        [Parameter]
-        public string ModalDialogClass { get; set; }
+        [Parameter] public string CloseBtnText { get; set; } = "Close";
 
-        [Parameter]
-        public bool DirectionRTL { get; set; }
+        [Parameter] public string ModalDialogClass { get; set; }
+        [Parameter] public string ModalContentClass { get; set; }
+        [Parameter] public string ModalHeaderClass { get; set; }
+        [Parameter] public string ModalBodyClass { get; set; }
+        [Parameter] public string ModalFooterClass { get; set; }
 
-        [Parameter]
-        public FullScreenAvailability FullScreenAvailability { get; set; } = FullScreenAvailability.FullScreenOff;
+        [Parameter] public bool DirectionRTL { get; set; }
 
-        [Parameter]
-        public RenderFragment ModalBodyContentHtml { get; set; }
+        [Parameter] public FullScreenAvailability FullScreenAvailability { get; set; } = FullScreenAvailability.FullScreenOff;
 
-        [Parameter]
-        public RenderFragment ModalHeader { get; set; }
+        [Parameter] public RenderFragment ModalBodyContentHtml { get; set; }
 
-        [Parameter]
-        public RenderFragment ModalFooter { get; set; }
+        [Parameter] public RenderFragment ModalHeader { get; set; }
 
-        [Parameter]
-        public RenderFragment ModalFooterHtmlWhitoutCloseBtn { get; set; }
+        [Parameter] public RenderFragment ModalFooter { get; set; }
 
-        [Parameter]
-        public EventCallback OnCloseModal { get; set; }
+        [Parameter] public RenderFragment ModalFooterHtmlWhitoutCloseBtn { get; set; }
 
-        [Parameter]
-        public EventCallback OnOpenModal { get; set; }
+        [Parameter] public EventCallback OnCloseModal { get; set; }
 
-        [Parameter]
-        public bool ShowHeader { get; set; } = true;
-        [Parameter]
-        public bool ShowFooter { get; set; } = true;
+        [Parameter] public EventCallback OnOpenModal { get; set; }
+
+        [Parameter] public bool ShowHeader { get; set; } = true;
+        [Parameter] public bool ShowFooter { get; set; } = true;
+        [Parameter] public bool ShowBackdrop { get; set; } = true;
+
         public Guid Guid = Guid.NewGuid();
         public string ModalDisplay = "none;";
         public string ModalClass = "";
         public string fullScreenAvailability = "";
-        public bool ShowBackdrop = false;
+        public bool Backdrop = false;
         public bool DisposeModal = false;
 
         protected override void OnInitialized()
@@ -87,7 +81,7 @@ namespace BlazorBSModal
             DisposeModal = false;
             ModalDisplay = "block;";
             ModalClass = "Show";
-            ShowBackdrop = true;
+            Backdrop = true;
             StateHasChanged();
             await OnOpenModal.InvokeAsync();
         }
@@ -96,7 +90,7 @@ namespace BlazorBSModal
         {
             ModalDisplay = "none";
             ModalClass = "";
-            ShowBackdrop = false;
+            Backdrop = false;
             StateHasChanged();
             await OnCloseModal.InvokeAsync();
         }
@@ -106,7 +100,7 @@ namespace BlazorBSModal
             DisposeModal = true;
             ModalDisplay = "none";
             ModalClass = "";
-            ShowBackdrop = false;
+            Backdrop = false;
             StateHasChanged();
             await OnCloseModal.InvokeAsync();
         }

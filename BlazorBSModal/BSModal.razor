@@ -4,18 +4,18 @@
 {
     <div class="modal @ModalClass" tabindex="-1" role="dialog" style="display:@ModalDisplay;@(DirectionRTL?"direction: rtl;":"")">
         <div class="modal-dialog @ModalDialogClass @fullScreenAvailability" role="document">
-            <div class="modal-content">
+            <div class="modal-content @ModalContentClass">
                 @if (ShowHeader)
                 {
                     if (ModalHeader != null)
                     {
-                        <div class="modal-header">
+                        <div class="modal-header @ModalHeaderClass">
                             @ModalHeader
                         </div>
                     }
                     else
                     {
-                        <div class="modal-header">
+                        <div class="modal-header @ModalHeaderClass">
 
                             <h5 class="modal-title">@ModalTitle</h5>
                             <button @onclick="() => Close()" type="button" style="@(DirectionRTL?"margin: -1rem auto -1rem -1rem;":"")" class="close" data-dismiss="modal" aria-label="Close">
@@ -26,7 +26,7 @@
 
                 }
 
-                <div class="modal-body">
+                <div class="modal-body @ModalBodyClass">
                     @ModalBodyContentHtml
                 </div>
 
@@ -34,13 +34,13 @@
                 {
                     if (ModalFooter != null)
                     {
-                        <div class="modal-footer">
+                        <div class="modal-footer @ModalFooterClass">
                             @ModalFooter
                         </div>
                     }
                     else
                     {
-                        <div class="modal-footer">
+                        <div class="modal-footer @ModalFooterClass">
                             @ModalFooterHtmlWhitoutCloseBtn
                             <button type="button" class="btn btn-secondary" data-dismiss="modal" @onclick="() => Close()">@CloseBtnText</button>
                         </div>
@@ -54,9 +54,12 @@
 
 
 
-@if (ShowBackdrop)
+@if (Backdrop)
 {
-    <div class="modal-backdrop fade show"></div>
+    if (ShowBackdrop)
+    {
+        <div class="modal-backdrop fade show"></div>
+    }
 }
 
 
