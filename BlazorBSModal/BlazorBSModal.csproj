@@ -10,7 +10,7 @@
     <RepositoryUrl>https://github.com/MeysamMoghaddam/BlazorBSModal</RepositoryUrl>
     <PackageTags>BlazorWebAssembly Bootstrap Modal dotnet6</PackageTags>
     <PackageReleaseNotes>add fade and CloseOnClickBackdrop</PackageReleaseNotes>
-    <Version>2.5.1</Version>
+    <Version>2.5.3</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>logo.png</PackageIcon>
