@@ -48,7 +48,7 @@ namespace BlazorBSModal
         public bool Backdrop = false;
         public bool DisposeModal = false;
 
-        private bool MouseIsOver = false;
+        private bool MouseIsOutOfModal = true;
         protected override void OnInitialized()
         {
             switch (FullScreenAvailability)
@@ -81,7 +81,7 @@ namespace BlazorBSModal
         }
         public async Task ClickOnOutOfModal()
         {
-            if (CloseOnClickOutOfModal && MouseIsOver)
+            if (CloseOnClickOutOfModal && MouseIsOutOfModal)
                 await Close();
         }
         public async Task Open()

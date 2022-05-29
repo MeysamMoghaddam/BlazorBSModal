@@ -4,7 +4,7 @@
 {
     <div class="modal @ModalClass @(FadeModal?"fade":"")" tabindex="-1" role="dialog" style="display:@ModalDisplay;@(DirectionRTL?"direction: rtl;":"")" @onclick="ClickOnOutOfModal">
         <div class="modal-dialog @ModalDialogClass @fullScreenAvailability" role="document">
-            <div class="modal-content @ModalContentClass" @onmouseover="() => MouseIsOver = true" @onmouseout="() => MouseIsOver = false">
+            <div class="modal-content @ModalContentClass" @onmouseover="() => MouseIsOutOfModal = false" @onmouseout="() => MouseIsOutOfModal = true">
                 @if (ShowHeader)
                 {
                     if (ModalHeader != null)
