@@ -1,53 +1,57 @@
 ﻿@namespace BlazorBSModal
 
-<div class="modal @ModalClass" tabindex="-1" role="dialog" style="display:@ModalDisplay;@(DirectionRTL?"direction: rtl;":"")">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            @if (ShowHeader)
-            {
-                if (ModalHeader != null)
+@if (!DisposeModal)
+{
+    <div class="modal @ModalClass" tabindex="-1" role="dialog" style="display:@ModalDisplay;@(DirectionRTL?"direction: rtl;":"")">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                @if (ShowHeader)
                 {
-                    <div class="modal-header">
-                        @ModalHeader
-                    </div>
+                    if (ModalHeader != null)
+                    {
+                        <div class="modal-header">
+                            @ModalHeader
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="modal-header">
+
+                            <h5 class="modal-title">@ModalTitle</h5>
+                            <button @onclick="() => Close()" type="button" style="@(DirectionRTL?"margin: -1rem auto -1rem -1rem;":"")" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    }
+
                 }
-                else
+
+                <div class="modal-body">
+                    @ModalBodyContentHtml
+                </div>
+
+                @if (ShowFooter)
                 {
-                    <div class="modal-header">
-
-                        <h5 class="modal-title">@ModalTitle</h5>
-                        <button @onclick="() => Close()" type="button" style="@(DirectionRTL?"margin: -1rem auto -1rem -1rem;":"")" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
+                    if (ModalFooter != null)
+                    {
+                        <div class="modal-footer">
+                            @ModalFooter
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="modal-footer">
+                            @ModalFooterHtmlWhitoutCloseBtn
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" @onclick="() => Close()">@CloseBtnText</button>
+                        </div>
+                    }
                 }
 
-            }
-
-            <div class="modal-body">
-                @ModalBodyContentHtml
             </div>
-
-            @if (ShowFooter)
-            {
-                if (ModalFooter != null)
-                {
-                    <div class="modal-footer">
-                        @ModalFooter
-                    </div>
-                }
-                else
-                {
-                    <div class="modal-footer">
-                        @ModalFooterHtmlWhitoutCloseBtn
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" @onclick="() => Close()">@CloseBtnText</button>
-                    </div>
-                }
-            }
-
         </div>
     </div>
-</div>
+}
+
 
 
 @if (ShowBackdrop)
@@ -73,9 +77,11 @@
     public string ModalDisplay = "none;";
     public string ModalClass = "";
     public bool ShowBackdrop = false;
+    public bool DisposeModal = false;
 
     public async Task Open()
     {
+        DisposeModal = false;
         ModalDisplay = "block;";
         ModalClass = "Show";
         ShowBackdrop = true;
@@ -85,6 +91,16 @@
 
     public async Task Close()
     {
+        ModalDisplay = "none";
+        ModalClass = "";
+        ShowBackdrop = false;
+        StateHasChanged();
+        await OnCloseModal.InvokeAsync();
+    }
+
+     public async Task CloseAndDispose()
+    {
+        DisposeModal = true;
         ModalDisplay = "none";
         ModalClass = "";
         ShowBackdrop = false;
