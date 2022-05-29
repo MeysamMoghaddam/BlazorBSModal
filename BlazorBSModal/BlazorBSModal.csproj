@@ -9,8 +9,8 @@
     <PackageProjectUrl>https://github.com/MeysamMoghaddam/BlazorBSModal</PackageProjectUrl>
     <RepositoryUrl>https://github.com/MeysamMoghaddam/BlazorBSModal</RepositoryUrl>
     <PackageTags>BlazorWebAssembly Bootstrap Modal dotnet6</PackageTags>
-    <PackageReleaseNotes>Modal Elements Class Parameters</PackageReleaseNotes>
-    <Version>2.4.0</Version>
+    <PackageReleaseNotes>Scrolling long content</PackageReleaseNotes>
+    <Version>2.4.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>logo.png</PackageIcon>
