@@ -20,6 +20,8 @@ namespace BlazorBSModal
         [Parameter] public string ModalFooterClass { get; set; }
 
         [Parameter] public bool DirectionRTL { get; set; }
+        [Parameter] public bool FadeModal { get; set; }
+        [Parameter] public bool CloseOnClickBackdrop { get; set; }
 
         [Parameter] public FullScreenAvailability FullScreenAvailability { get; set; } = FullScreenAvailability.FullScreenOff;
 
@@ -76,11 +78,16 @@ namespace BlazorBSModal
                     break;
             }
         }
+        public async Task ClickOnBackdrop()
+        {
+            if (CloseOnClickBackdrop)
+                await Close();
+        }
         public async Task Open()
         {
             DisposeModal = false;
             ModalDisplay = "block;";
-            ModalClass = "Show";
+            ModalClass = "show";
             Backdrop = true;
             StateHasChanged();
             await OnOpenModal.InvokeAsync();
