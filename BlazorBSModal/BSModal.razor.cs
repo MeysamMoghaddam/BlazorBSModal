@@ -82,7 +82,7 @@ namespace BlazorBSModal
         public async Task ClickOnOutOfModal()
         {
             if (CloseOnClickOutOfModal && MouseIsOutOfModal)
-                await Close();
+                await CloseAndDispose();
         }
         public async Task Open()
         {
