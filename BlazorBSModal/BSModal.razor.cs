@@ -22,6 +22,8 @@ namespace BlazorBSModal
         [Parameter] public bool DirectionRTL { get; set; }
         [Parameter] public bool FadeModal { get; set; }
         [Parameter] public bool CloseOnClickOutOfModal { get; set; }
+        [Parameter] public bool ShowCloseBtn { get; set; }
+        [Parameter] public string HeaderTitleClass { get; set; }
 
         [Parameter] public FullScreenAvailability FullScreenAvailability { get; set; } = FullScreenAvailability.FullScreenOff;
 

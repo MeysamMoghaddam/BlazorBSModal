@@ -17,10 +17,14 @@
                     {
                         <div class="modal-header @ModalHeaderClass">
 
-                            <h5 class="modal-title">@ModalTitle</h5>
-                            <button @onclick="() => Close()" type="button" style="@(DirectionRTL?"margin: -1rem auto -1rem -1rem;":"")" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                            <h5 class="modal-title @(HeaderTitleClass)">@ModalTitle</h5>
+                            @if (ShowCloseBtn)
+                            {
+                                <button @onclick="() => Close()" type="button" style="@(DirectionRTL ? "margin: -1rem auto -1rem -1rem;" : "")" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            }
+                            
                         </div>
                     }
 
